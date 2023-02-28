@@ -19,7 +19,7 @@ public:
      * @brief Allows to set global logging level across all the logger instances used.
      * @param level Logging level to be set.
      */
-    void SetLevel(const LoggingLevel level);
+    static void SetLevel(const LoggingLevel level);
     /**
      * @brief Log a fatal error message. Use this function for logging in case of unrecoverable component error.
      * @param message Message content.
