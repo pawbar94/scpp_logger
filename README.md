@@ -27,7 +27,7 @@ SCPPLogger (Simple C++ Logger) is a library which allows user to set up basic lo
 
 The preffered way of building this project is to use build.bat or build.sh script (depending on whether you are on Windows or Linux). These scripts take only one optional argument which is build type (Debug by default or Release), so if you want to build a Debug version, just go to _scripts_ folder and call `build.bat` (Windows) or `./build.sh` (Linux).
 
-If for any reason build script fails, to build the SCPPLibrary library manually, call from the repository root:
+If for any reason build script fails, to build the SCPPLogger library manually, call from the repository root:
 
 ```
 mkdir build 
@@ -36,7 +36,7 @@ cmake ..
 cmake --build .
 cmake --install .
 ```
-And to build SCPPLibrary example:
+And to build SCPPLogger example:
 ```
 cd example
 mkdir build 
