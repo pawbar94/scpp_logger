@@ -52,7 +52,7 @@ void Logger::Log(const std::string &message, const LoggingLevel logging_level) c
 {
     std::lock_guard<std::mutex> lock(mtx);
 
-    if (level_ >= logging_level) {
+    if (level_ <= logging_level) {
         std::cout << "[" << LoggingLevelToString(logging_level) << "][" << name_ << "] " << message << std::endl;
     }
 }
