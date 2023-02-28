@@ -31,8 +31,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 
 if (UNIX)
     install(FILES ${SCPP_LOGGER_DIR}/libSCPPLogger.so DESTINATION ${CMAKE_BINARY_DIR})
-endif(UNIX)
-
-if (WIN32)
+elseif (WIN32)
     install(FILES ${SCPP_LOGGER_DIR}/SCPPLogger.dll DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE})
-endif(WIN32)
+endif()

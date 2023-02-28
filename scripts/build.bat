@@ -1,37 +1,37 @@
-@REM @echo off
+@echo off
 
-@REM set BUILD_TYPE=%1
+set BUILD_TYPE=%1
 
-@REM if [%1] == [] set BUILD_TYPE=Debug
+if [%1] == [] set BUILD_TYPE=Debug
 
-@REM set SCRIPTS_DIR=%~dp0
-@REM set REPO_DIR=%SCRIPTS_DIR%..
-@REM set COMLINT_BUILD_DIR=%REPO_DIR%\build
-@REM set EXAMPLES_DIR=%REPO_DIR%\examples
-@REM set EXAMPLES_BUILD_DIR=%EXAMPLES_DIR%\build
+set SCRIPTS_DIR=%~dp0
+set REPO_DIR=%SCRIPTS_DIR%..
+set SCPP_LOGGER_BUILD_DIR=%REPO_DIR%\build
+set EXAMPLE_DIR=%REPO_DIR%\example
+set EXAMPLE_BUILD_DIR=%EXAMPLE_DIR%\build
 
-@REM echo ----- Build type: %BUILD_TYPE% -----
+echo ----- Build type: %BUILD_TYPE% -----
 
-@REM echo ----- Configuring CMake for ComlintCpp for sources in %REPO_DIR% and build in %COMLINT_BUILD_DIR% -----
-@REM cmake -S %REPO_DIR% -B %COMLINT_BUILD_DIR% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
-@REM echo ----- ComlintCpp CMake configuration done -----
+echo ----- Configuring CMake for SCPPLogger for sources in %REPO_DIR% and build in %SCPP_LOGGER_BUILD_DIR% -----
+cmake -S %REPO_DIR% -B %SCPP_LOGGER_BUILD_DIR% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
+echo ----- SCPPLogger CMake configuration done -----
 
-@REM echo ----- Building ComlintCpp in %COMLINT_BUILD_DIR% -----
-@REM cmake --build %COMLINT_BUILD_DIR% --config %BUILD_TYPE%
-@REM echo ----- ComlintCpp build done -----
+echo ----- Building SCPPLogger in %SCPP_LOGGER_BUILD_DIR% -----
+cmake --build %SCPP_LOGGER_BUILD_DIR% --config %BUILD_TYPE%
+echo ----- SCPPLogger build done -----
 
-@REM echo ----- Installing ComlintCpp in %COMLINT_BUILD_DIR% -----
-@REM cmake --install %COMLINT_BUILD_DIR% --config %BUILD_TYPE%
-@REM echo ----- ComlintCpp installation done -----
+echo ----- Installing SCPPLogger in %SCPP_LOGGER_BUILD_DIR% -----
+cmake --install %SCPP_LOGGER_BUILD_DIR% --config %BUILD_TYPE%
+echo ----- SCPPLogger installation done -----
 
-@REM echo ----- Configuring CMake for Comlint examples for sources in %EXAMPLES_DIR% and build in %EXAMPLES_BUILD_DIR% -----
-@REM cmake -S %EXAMPLES_DIR% -B %EXAMPLES_BUILD_DIR% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
-@REM echo ----- Comlint examples' CMake configuration done -----
+echo ----- Configuring CMake for SCPPLogger example for sources in %EXAMPLE_DIR% and build in %EXAMPLE_BUILD_DIR% -----
+cmake -S %EXAMPLE_DIR% -B %EXAMPLE_BUILD_DIR% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
+echo ----- SCPPLogger example's CMake configuration done -----
 
-@REM echo ----- Building Comlint examples in %EXAMPLES_BUILD_DIR% -----
-@REM cmake --build %EXAMPLES_BUILD_DIR% --config %BUILD_TYPE%
-@REM echo ----- Comlint examples' build done -----
+echo ----- Building SCPPLogger example in %EXAMPLE_BUILD_DIR% -----
+cmake --build %EXAMPLE_BUILD_DIR% --config %BUILD_TYPE%
+echo ----- SCPPLogger example's build done -----
 
-@REM echo ----- Installing comlint examples in %EXAMPLES_BUILD_DIR% -----
-@REM cmake --install %EXAMPLES_BUILD_DIR% --config %BUILD_TYPE%
-@REM echo ----- Comlint examples' installation done -----
+echo ----- Installing SCPPLogger examples in %EXAMPLE_BUILD_DIR% -----
+cmake --install %EXAMPLE_BUILD_DIR% --config %BUILD_TYPE%
+echo ----- SCPPLogger examples' installation done -----

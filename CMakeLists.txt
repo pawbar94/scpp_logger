@@ -21,7 +21,3 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 target_sources(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/logger.cpp
 )
-
-install(TARGETS ${TARGET}
-        LIBRARY DESTINATION lib
-        PUBLIC_HEADER DESTINATION include)
