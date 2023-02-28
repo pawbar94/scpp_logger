@@ -1,7 +1,7 @@
 #include <iostream>
 #include <mutex>
 
-#include "logger.hpp"
+#include "scpp_logger.hpp"
 
 namespace scpp {
 

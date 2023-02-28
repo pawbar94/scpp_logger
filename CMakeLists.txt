@@ -19,5 +19,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/logger.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/scpp_logger.cpp
 )

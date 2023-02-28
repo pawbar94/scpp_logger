@@ -47,7 +47,7 @@ public:
      */
     void Debug(const std::string &message) const;
     /**
-     * @brief Log a verbose message. Use this function for logging information helpful for the software developer during software development.
+     * @brief Log a verbose message. Use this function for logging information helpful for the software developer during the development.
      * @param message Message content.
      */
     void Verbose(const std::string &message) const;
