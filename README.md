@@ -47,7 +47,7 @@ cmake --install .
 ```
 
 ### <a name="how_to_embed_scpp_logger_into_your_project"></a>How to embed SCPPLogger into your project
-Embedding SCPPLogger into your project is very easy and (assuming that comlint is in root of your project) the minimum CMakeLists.txt file that you need is:
+Embedding SCPPLogger into your project is very easy and (assuming that scpp_logger is in root of your project) the minimum CMakeLists.txt file that you need is:
 
 ```
 cmake_minimum_required(VERSION 3.10)
@@ -103,7 +103,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${SCPP_LOGGER_LIB}
 )
 ```
-After that you can start using comlint in main.cpp file.
+After that you can start using SCPPLogger in main.cpp file.
 
 ## <a name="how_to_use"></a>How to use
 
