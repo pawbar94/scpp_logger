@@ -14,9 +14,17 @@ Logger::Logger(const std::string &name)
 
 void Logger::SetLevel(const LoggingLevel level)
 {
-    std::lock_guard<std::mutex> lock(mtx);
+    try {
+        std::lock_guard<std::mutex> lock(mtx);
 
-    level_ = level;
+        level_ = level;
+    }
+    catch (const std::exception &e) {
+        std::cerr << "Error during setting logging level: " << e.what() << std::endl;
+    }
+    catch (...) {
+        std::cerr << "Unknown error occured during setting logging level!" << std::endl;
+    }
 }
 void Logger::Fatal(const std::string &message) const
 {
@@ -50,10 +58,18 @@ void Logger::Verbose(const std::string &message) const
 
 void Logger::Log(const std::string &message, const LoggingLevel logging_level) const
 {
-    std::lock_guard<std::mutex> lock(mtx);
+    try {
+        std::lock_guard<std::mutex> lock(mtx);
 
-    if (level_ <= logging_level) {
-        std::cout << "[" << LoggingLevelToString(logging_level) << "][" << name_ << "] " << message << std::endl;
+        if (level_ <= logging_level) {
+            std::cout << "[" << LoggingLevelToString(logging_level) << "][" << name_ << "] " << message << std::endl;
+        }
+    }
+    catch (const std::exception &e) {
+        std::cerr << "Error during logging: " << e.what() << std::endl;
+    }
+    catch (...) {
+        std::cerr << "Unknown error occurred during logging!" << std::endl;
     }
 }
 

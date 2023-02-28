@@ -10,13 +10,6 @@ Table of contents:
 &emsp;[How to embed SCPPLogger into your project](#how_to_embed_scpp_logger_into_your_project)<br>
 &emsp;[How to use SCPPLogger release package](#how_to_use_scpp_logger_release_package)<br>
 [How to use](#how_to_use)<br>
-&emsp;[Creating command line interface](#creating_command_line_interface)<br>
-&emsp;&emsp;[Adding commands](#adding_commands)<br>
-&emsp;&emsp;[Adding options](#adding_options)<br>
-&emsp;&emsp;[Adding flags](#adding_flags)<br>
-&emsp;[Parsing command line interface](#parsing_command_line_interface)<br>
-&emsp;[Running command line interface](#running_command_line_interface)<br>
-[Exceptions you may expect](#exceptions_you_may_expect)<br>
 
 ## <a name="what_is_it"></a>What is it?
 
