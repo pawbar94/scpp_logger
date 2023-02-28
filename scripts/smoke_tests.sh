@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 SCRIPTS_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 REPO_DIR=$SCRIPTS_DIR/..
 EXAMPLE_APP_BIN_DIR=$REPO_DIR/example/build

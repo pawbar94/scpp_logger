@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 BUILD_TYPE=$1
 
 if [ -z "$BUILD_TYPE" ]
